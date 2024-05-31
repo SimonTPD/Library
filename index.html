@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="./script.js" defer></script>
+    <title>Library</title>
+</head>
+<body>
+    <h1>Welcome to the library!</h1>
+    
+    <div class="main">
+        <div class="sidebar hide">
+            <form action="" method="post" >
+                <fieldset>
+                    <legend>Add a new book:</legend>
+
+                    <p>    
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" />
+                    </p>
+
+                    <p>                        
+                        <label for="author">Author:</label>
+                        <input type="text" id="author" name="author" />
+                    </p>
+
+
+                    <p>
+                        <label for="pages">Number of pages:</label>
+                        <input type="text" id="pages" name="pages" />
+                    </p>
+
+                    <p>
+                        <input type="radio" id="read" name="read-status" value="read" checked />
+                        <label for="read">I have read it.</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" id="not-read" name="read-status" value="not-read" />
+                        <label for="not-read">I have not read it.</label>
+                    </p>            
+                </fieldset>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="library"></div>
+    </div>
+    
+    <button type="input" id="new-book">Add new book</button>
+</body>
+</html>

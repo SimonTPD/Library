@@ -1,0 +1,183 @@
+/******************************************************/
+/*Meyer reset*/
+/******************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/******************************************************/
+/*Body*/
+/******************************************************/
+
+body{
+    font-family: sans-serif, system-ui;
+}
+
+/******************************************************/
+/*Header*/
+/******************************************************/
+
+h1{
+    padding: 12px 0px;
+
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: underline;
+    color: #fff;
+    font-weight: bolder;
+
+    background-color: #804004;
+}
+
+/******************************************************/
+/*Library div*/
+/******************************************************/
+div.library{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+
+    padding: 16px;
+
+    background-color: #e2e2e2;
+}
+
+.book-card{
+    padding: 16px;
+    min-width: 250px;
+    height: 350px;
+
+    font-size: 1.2rem;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #fff;
+}
+
+/******************************************************/
+/*Sidebar with form to add a book*/
+/******************************************************/
+.sidebar{
+    background-color: #e2e2e2;
+    
+    padding: 16px;
+
+    font-size: 1rem;
+}
+
+form input[type="text"],
+form button{
+    appearance: none;
+}
+
+form > fieldset{
+    border: 1px solid black;
+    border-radius: 4px;
+
+    padding: 8px;
+
+    margin-bottom: 8px;
+
+    display: grid;
+}
+
+form > fieldset > p > input[type="text"]{
+    border: none;
+    border-radius: 4px;
+}
+
+form > fieldset > p:nth-last-child(n + 2){
+    margin-bottom: 8px;
+}
+
+form > fieldset > p:nth-last-child(n + 3){
+    display: grid;
+    grid-auto-flow: row;
+}
+
+button[type="input"]#new-book,
+form button[type="submit"]{
+        display: block;
+        margin: 16px auto;
+        
+        width: 150px;
+        height: 50px;
+
+        border: none;
+        border-radius: 8px;
+
+        font-size: 1rem;
+}
+
+button[type="input"]#new-book:hover,
+form button[type="submit"]:hover{
+    background-color: #ddd;
+    box-shadow: 0px 0px 2px 2px #555;
+}
+
+button[type="input"]#new-book:active,
+form button[type="submit"]:active{
+    box-shadow: inset 0px 0px 2px 2px #555;
+}
+
+/******************************************************/
+/*****************JS classes***************************/
+/******************************************************/
+.with-sidebar{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 3fr;
+    gap: 12px;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.remove-button,
+.read-status-button{
+    display: block;
+    margin: 48px auto 0px;
+    
+    width: 150px;
+    height: 50px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 1rem;
+}
+
+.remove-button:hover,
+.read-status-button:hover{
+    background-color: #ddd;
+    box-shadow: 0px 0px 2px 2px #555;
+}
+
+.remove-button:active,
+.read-status-button:hover{
+    box-shadow: inset 0px 0px 2px 2px #555;
+}
