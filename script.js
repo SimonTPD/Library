@@ -1,3 +1,4 @@
+/*
 function Book(title, author, pages, read){
     this.title = typeof title !== "string" ? "Wrong data type for title!" : title;
     this.author = typeof author !== "string" ? "Wrong data type for author!" : author;
@@ -8,6 +9,21 @@ function Book(title, author, pages, read){
 Book.prototype.getInfo = function(){
     return `Title: ${this.title} by ${this.author}, ${this.pages} pages.
         ${this.read === true ? "I have read it.": "I have not read it."}`;
+}
+*/
+
+class Book{
+    constructor(title, author, pages, read){
+        this.title = typeof title !== "string" ? "Wrong data type for title!" : title;
+        this.author = typeof author !== "string" ? "Wrong data type for author!" : author;
+        this.pages = typeof pages !== "number" ? "Wrong data type for pages!" : pages;
+        this.read = typeof read !== "boolean" ? "Wrong data type for read!" : read;        
+    }
+
+    static getInfo(){
+        return `Title: ${this.title} by ${this.author}, ${this.pages} pages.
+        ${this.read === true ? "I have read it.": "I have not read it."}`;        
+    }
 }
 
 const dummyBook = new Book("Dummy", "Anonymous", 10, false);
